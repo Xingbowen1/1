@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* 左侧栏样式 */
+.sidebar {
+    flex: 0 0 280px;
+    position: sticky;
+    top: 40px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.avatar {
+    margin-bottom: 20px;
+}
+
+.avatar img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e0e0e0;
+}
+
+.avatar-placeholder {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 3px solid #e0e0e0;
+    font-size: 80px;
+    color: #999;
+    font-weight: bold;
+}
+
+.bio h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #222;
+}
+
+.bio p {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.7;
+    font-size: 0.95em;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: color 0.2s;
+}
+
+.contact-link:hover {
+    color: #0052a3;
+    text-decoration: underline;
+}
+
+.contact-link .icon {
+    font-size: 1em;
+}
+
+/* 右侧内容区样式 */
+.content {
+    flex: 1;
+    min-width: 0;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #222;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 8px;
+}
+
+/* News 列表样式 */
+.news-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.news-list li {
+    margin-bottom: 12px;
+    padding-left: 0;
+    line-height: 1.7;
+    color: #555;
+}
+
+.news-list li strong {
+    color: #222;
+    font-weight: 600;
+}
+
+/* Entry 样式（用于 Education, Experience 等） */
+.entry {
+    margin-bottom: 30px;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.entry-header strong {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #222;
+}
+
+.entry-header .date {
+    color: #666;
+    font-size: 0.95em;
+    font-weight: normal;
+}
+
+.entry-detail {
+    margin-top: 5px;
+    color: #555;
+}
+
+.entry-detail em {
+    font-style: italic;
+    color: #666;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.entry-list {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #555;
+}
+
+.entry-list li {
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+
+.entry-detail p {
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+.project-link {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* Skills 样式 */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #555;
+    border: 1px solid #e0e0e0;
+}
+
+/* 页脚样式 */
+.footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    color: #999;
+    font-size: 0.9em;
+}
+
+/* 响应式设计 */
+@media (max-width: 968px) {
+    .wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .sidebar {
+        flex: 1;
+        position: static;
+        width: 100%;
+    }
+
+    .avatar img,
+    .avatar-placeholder {
+        width: 150px;
+        height: 150px;
+    }
+
+    .avatar-placeholder {
+        font-size: 60px;
+    }
+
+    .bio {
+        text-align: center;
+    }
+
+    .bio h2,
+    .bio p {
+        text-align: center;
+    }
+
+    .contact-links {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .entry-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .entry-header .date {
+        margin-top: 5px;
+    }
+
+    .section h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    .sidebar {
+        position: static;
+    }
+    
+    .wrapper {
+        flex-direction: row;
+    }
+}
